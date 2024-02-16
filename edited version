@@ -145,7 +145,7 @@ while True:
     
             ValuePrint = print("\nHere is what you have entered:" ,combined)
     
-            confirmValue = input("\nis the value that you have entered correct: please select y for yes and n for no:  ")
+            confirmValue = input("\nIs the value you entered correct? Please select Y for Yes and N for No:")
             if confirmValue.lower() == 'y':
                  products.append(combined)
                  print("\nthe value has been added to the array")
