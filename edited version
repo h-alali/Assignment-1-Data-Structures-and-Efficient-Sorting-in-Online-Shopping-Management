@@ -114,6 +114,7 @@ while True:
             print(f"Time taken to sort the data: :{end_time-start_Time}")
             for product in products:
                 print(product) 
+            print("\nThe array has not been sorted in any way")
         # this will sort the list in bubble sort and  # to check the time complexity in the array with the list of the things inside the array
         elif array_edits == 2:
             start_Time = time.time()
@@ -122,7 +123,7 @@ while True:
             bubbleSort(products)
             for product in products:
                 print(product) 
-            print("\nthe array has been bubble sorted")
+            print("\nThe array has been sorted using the bubble sort algorithm.")
                     # this will sort the list in bubble sort and  # to check the time complexity in the array with the list of the things inside the array
         elif array_edits == 3:
             start_Time = time.time()
@@ -131,7 +132,7 @@ while True:
             Reverse_bubbleSort(products)
             for product in products:
                 print(product) 
-            print("\nthe array has been bubble sorted")
+                print("\nThe array has been sorted using the reverse bubble sort algorithm.")
     #the command that lets the user insert a product to input a new line
     elif insert == 2:
        
