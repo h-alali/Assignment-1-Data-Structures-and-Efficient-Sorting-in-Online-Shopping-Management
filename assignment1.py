@@ -1,4 +1,5 @@
 
+
 from calendar import c
 from cgi import print_directory
 from gettext import install
@@ -101,37 +102,39 @@ def Reverse_bubbleSort(arr):
 
 
 while True:
-    print("\nSelect 1 shorting and veiwing the array:\nSelect 2 to Insert a value\nSelect 3 to update a value\nSelect 4 to remove a product\nSelect 5 searches for a product\nselect 6 to exit ")
+    print("Select an option:\n1. View array\n2. Insert value\n3. Update value\n4. Remove product\n5. Search for product\n6. Exit")
     insert = int(input("\nPlease select one of the values at the top:  "))
     
     #the command that lets the user see whats inside the array, without sorting it and  # to check the time complexity in the array with the list of the things inside the array
     if insert == 1:
-        print("\nSelect 1 to Veiw the list without sorting\nselect 2 Veiw the list in bubble sort the Array\nSelect 3 Veiw the list in bubble sort the Array in reverse")
+        print("Select one of the following options:\n1. View the list without sorting\n2. View the list in bubble sort\n3. View the list in reverse bubble sort")
         array_edits = int(input("enter value here: "))
         if array_edits == 1:
-            start_Time = time.time()
-            end_time = time.time()
-            print(f"Time taken to sort the data: :{end_time-start_Time}")
+            start_Time = time.perf_counter()
+            end_time = time.perf_counter()
+            print(f"Time taken to sort the data: :{end_time-start_Time} seconds")
             for product in products:
                 print(product) 
+            print("\nThe array has not been sorted in any way")
         # this will sort the list in bubble sort and  # to check the time complexity in the array with the list of the things inside the array
         elif array_edits == 2:
-            start_Time = time.time()
-            end_time = time.time()
-            print(f"Time taken to sort the data: :{end_time-start_Time}")
+            start_Time = time.perf_counter()
             bubbleSort(products)
+            end_time = time.perf_counter()
+            print(f"Time taken to sort the data: :{end_time-start_Time} seconds")
             for product in products:
                 print(product) 
-            print("\nthe array has been bubble sorted")
+            print("\nThe array has been sorted using the bubble sort algorithm.")
                     # this will sort the list in bubble sort and  # to check the time complexity in the array with the list of the things inside the array
         elif array_edits == 3:
-            start_Time = time.time()
-            end_time = time.time()
-            print(f"Time taken to sort the data: :{end_time-start_Time}")
+            start_Time = time.perf_counter()
             Reverse_bubbleSort(products)
+            end_time = time.perf_counter()
+            print("\nThe array has been sorted using the reverse bubble sort algorithm.")
+            print(f"Time taken to sort the data: :{end_time-start_Time} seconds")
             for product in products:
                 print(product) 
-            print("\nthe array has been bubble sorted")
+       
     #the command that lets the user insert a product to input a new line
     elif insert == 2:
        
@@ -144,7 +147,7 @@ while True:
     
             ValuePrint = print("\nHere is what you have entered:" ,combined)
     
-            confirmValue = input("\nis the value that you have entered correct: please select y for yes and n for no:  ")
+            confirmValue = input("\nIs the value you entered correct? Please select Y for Yes and N for No:")
             if confirmValue.lower() == 'y':
                  products.append(combined)
                  print("\nthe value has been added to the array")
@@ -197,3 +200,4 @@ while True:
     
     else:
         print("invalid value you have selected: " , insert)
+        
