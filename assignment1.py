@@ -1,5 +1,5 @@
-
-
+#Haidar Al-Ali
+#INFR 2820U
 from calendar import c
 from cgi import print_directory
 from gettext import install
